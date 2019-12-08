@@ -1,9 +1,16 @@
 import React from 'react'
 
+const HelloWorld = () => {
+	return (
+		<h1>Hello world</h1>
+	)
+}
+
+
 const App = () => {
 	return (
 		<div>
-			<h1>Hello world</h1>
+			<HelloWorld/>
 			<p>Qwerty</p>
 		</div>
 )
