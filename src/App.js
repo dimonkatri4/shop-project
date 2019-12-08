@@ -1,7 +1,10 @@
 import React from 'react'
 
 function App() {
-	return "Hello world"
+	return <div>
+		<h1>Hello world</h1>
+		<p>qwert</p>
+	</div>
 }
 
 
