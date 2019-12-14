@@ -1,8 +1,6 @@
 import React from 'react'
 
 import './header.css'
-import './menu.css'
-import './cart.css'
 
 import Logo from './Logo/Logo'
 import Menu from './Menu/Menu'
