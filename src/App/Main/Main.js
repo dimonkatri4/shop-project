@@ -12,6 +12,7 @@ const Main =() => {
 						<div className="col-lg-9">
 							<ProductsList/>
 						</div>
+						
 					</div>
 				</div>
 			</main>
