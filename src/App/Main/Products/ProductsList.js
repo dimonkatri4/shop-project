@@ -2,7 +2,14 @@ import React from 'react'
 
 const ProductsList = () => {
     return (
-        <h1>Products List</h1>
+        <div>
+            <h1 style={{
+                textAlign:"center",
+                color:"white",
+                fontSize:"32px",
+                marginTop:"15px",
+            }}>Products List</h1>
+        </div>
     )
 }
 
