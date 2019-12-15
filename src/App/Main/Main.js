@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductsList from './Products/ProductsList'
 
 const Main =() => {
 	return (
@@ -9,7 +10,7 @@ const Main =() => {
 							Filter
 						</div>
 						<div className="col-lg-9">
-							Product List
+							<ProductsList/>
 						</div>
 					</div>
 				</div>
