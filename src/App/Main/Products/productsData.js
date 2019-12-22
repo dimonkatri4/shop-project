@@ -26,6 +26,13 @@ const productsData = [
         type: "Phone",
         capacity: "128",
         price: "740",
+    },
+    {
+        name: "Iphone 9 Plus",
+        description: "This is Iphone 9 ",
+        type: "Phone",
+        capacity: "16",
+        price: "539",
     }
 ]
 
