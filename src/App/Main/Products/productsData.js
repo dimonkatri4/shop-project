@@ -1,5 +1,6 @@
 const productsData = [
     {
+        id: 1,
         name:"Iphone X",
         description:"This is Iphone X",
         type:"Phone",
@@ -7,6 +8,7 @@ const productsData = [
         price:"1000",
     },
     {
+        id: 2,
         name:"Iphone XS",
         description: "This is Iphone XS",
         type: "Phone",
@@ -14,6 +16,7 @@ const productsData = [
         price: "1700",
     },
     {
+        id: 3,
         name:"Iphone XS Max",
         description : "This is Iphone XS MAx",
         type: "Phone",
@@ -21,6 +24,7 @@ const productsData = [
         price: "900",
     },
     {
+        id: 4,
         name: "Iphone 7 Plus",
         description: "This is Iphone 7 Plus",
         type: "Phone",
@@ -28,6 +32,7 @@ const productsData = [
         price: "740",
     },
     {
+        id: 5,
         name: "Iphone 9 Plus",
         description: "This is Iphone 9 ",
         type: "Phone",
