@@ -15,7 +15,8 @@ const ProductsList = () => {
                             description,
                             type,
                             capacity,
-                            price
+                            price,
+                            image
                         }
                     )=>( 
                         <div className="col-lg-6" key={id}>
@@ -25,6 +26,7 @@ const ProductsList = () => {
                                 type = {type}
                                 capacity = {capacity}
                                 price = {price}
+                                image = {image}
                             />
                         </div>
                     ))

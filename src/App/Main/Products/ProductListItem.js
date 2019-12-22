@@ -6,12 +6,13 @@ const ProductListItem = ({
     description,
     type,
     capacity,
-    price
+    price,
+    image
 }) => {
     return(
         <div className="product-list-item">
             <div className="product-image">
-                <img />
+                <img src={image} alt={name} title={name}/>
             </div>
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
