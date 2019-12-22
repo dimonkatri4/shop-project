@@ -10,6 +10,9 @@ const ProductListItem = ({
 }) => {
     return(
         <div className="product-list-item">
+            <div className="product-image">
+                <img />
+            </div>
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
             <div className="product-features">Type: {type}</div>
