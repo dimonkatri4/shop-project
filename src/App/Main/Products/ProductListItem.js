@@ -34,4 +34,8 @@ ProductListItem.propTypes = {
     image: PropTypes.string
 }
 
+ProductListItem.defaultProps = {
+    description: "No description ...",
+}
+
 export default ProductListItem
