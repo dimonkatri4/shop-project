@@ -8,7 +8,7 @@ const ProductListItem = ({
     type,
     capacity,
     price,
-    image
+    image = './images/products/no-image.png'
 }) => {
     return(
         <div className="product-list-item">
