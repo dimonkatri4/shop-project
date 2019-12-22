@@ -4,8 +4,8 @@ const productsData = [
         name:"Iphone X",
         description:"This is Iphone X",
         type:"Phone",
-        capacity:"256",
-        price:"1000",
+        capacity:256,
+        price:1000,
         image: '/images/products/ipad.png'
     },
     {
@@ -13,8 +13,8 @@ const productsData = [
         name:"Iphone XS",
         description: "This is Iphone XS",
         type: "Phone",
-        capacity: "64",
-        price: "1700",
+        capacity: 64,
+        price: 1700,
         image: '/images/products/iphone.png'
     },
     {
@@ -22,8 +22,8 @@ const productsData = [
         name:"Iphone XS Max",
         description : "This is Iphone XS MAx",
         type: "Phone",
-        capacity : "128",
-        price: "900",
+        capacity : 128,
+        price: 900,
         image: '/images/products/ipad.png'
     },
     {
@@ -31,8 +31,8 @@ const productsData = [
         name: "Iphone 7 Plus",
         description: "This is Iphone 7 Plus",
         type: "Phone",
-        capacity: "128",
-        price: "740",
+        capacity: 128,
+        price: 740,
         image: '/images/products/iphone.png'
     },
     {
@@ -40,8 +40,8 @@ const productsData = [
         name: "Iphone 9 Plus",
         description: "This is Iphone 9 ",
         type: "Phone",
-        capacity: "16",
-        price: "539",
+        capacity: 16,
+        price: 539,
         image: '/images/products/ipad.png'
     }
 ]
