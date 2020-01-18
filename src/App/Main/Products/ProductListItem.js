@@ -3,6 +3,14 @@ import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
 class ProductListItem extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            productsCount:1
+        }
+    }
+
     render() {
         return(
             <div className="product-list-item">
@@ -15,7 +23,7 @@ class ProductListItem extends Component {
                 <div className="product-features">Capacity: {this.props.capacity}</div>
                 <div className="product-quantity">
                     <button>-</button>
-                    <input type="text" value = "1" readOnly={true}></input>
+                    <input type="text" value = {this.state.productsCount} readOnly={true}></input>
                     <button>+</button>
                 </div>
                 <div className="product-price">Price: {this.props.price}</div>
