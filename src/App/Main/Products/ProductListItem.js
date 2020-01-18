@@ -11,13 +11,8 @@ class ProductListItem extends Component {
 
     state = {
         productsCount:1,
-        color: "green"
     }
     
-    changeColorClick = () => {
-        this.setState({color:"red"})
-    }
-
     onIncrementClick = () => {
         this.setState((prevState)=>({
             productsCount:prevState.productsCount + 1
@@ -39,8 +34,6 @@ class ProductListItem extends Component {
                 <div className="product-description">{this.props.description}</div>
                 <div className="product-features">Type: {this.props.type}</div>
                 <div className="product-features">Capacity: {this.props.capacity}</div>
-                <div>Color:{this.state.color} </div>
-                <button onClick={this.changeColorClick}>Change color</button>
                 <div className="product-quantity">
                     <button onClick={this.onDecrementClick}>-</button>
                     <input type="text" value = {this.state.productsCount} readOnly={true}></input>
