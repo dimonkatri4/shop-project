@@ -4,12 +4,9 @@ import './ProductListItem.css'
 
 class ProductListItem extends Component {
 
-    constructor() {
-        super()
-        this.state = {
+    state = {
             productsCount:1
         }
-    }
 
     render() {
         return(
