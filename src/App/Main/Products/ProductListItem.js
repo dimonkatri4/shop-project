@@ -1,34 +1,30 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
-const ProductListItem = ({
-    name,
-    description = "No description..",
-    type,
-    capacity,
-    price,
-    image = './images/products/no-image.png'
-}) => {
-    return(
-        <div className="product-list-item">
-            <div className="product-image">
-                <img src={image} alt={name} title={name}/>
-            </div>
-            <div className="product-title">{name}</div>
-            <div className="product-description">{description}</div>
-            <div className="product-features">Type: {type}</div>
-            <div className="product-features">Capacity: {capacity}</div>
-            <div className="product-quantity">
-                <button>-</button>
-                <input type="text" value = "1" readOnly={true}></input>
-                <button>+</button>
-            </div>
-            <div className="product-price">Price: {price}</div>
-            <button className="btn btn-add-to-cart"> Add to cart</button>
-        </div>       
-    )
+class ProductListItem extends Component {
+    render() {
+        return(
+            <div className="product-list-item">
+                <div className="product-image">
+                    <img src={this.props.image} alt={this.props.name} title={this.props.name}/>
+                </div>
+                <div className="product-title">{this.props.name}</div>
+                <div className="product-description">{this.props.description}</div>
+                <div className="product-features">Type: {this.props.type}</div>
+                <div className="product-features">Capacity: {this.props.capacity}</div>
+                <div className="product-quantity">
+                    <button>-</button>
+                    <input type="text" value = "1" readOnly={true}></input>
+                    <button>+</button>
+                </div>
+                <div className="product-price">Price: {this.props.price}</div>
+                <button className="btn btn-add-to-cart"> Add to cart</button>
+            </div>  
+        )
+    }
 }
+
 
 ProductListItem.propTypes = {
     name: PropTypes.string.isRequired,
@@ -39,8 +35,8 @@ ProductListItem.propTypes = {
     image: PropTypes.string
 }
 
-// ProductListItem.defaultProps = {
-//     description: "No description ...",
-// }
+ProductListItem.defaultProps = {
+    description: "No description ...",
+}
 
 export default ProductListItem
