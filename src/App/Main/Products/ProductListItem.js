@@ -23,7 +23,7 @@ class ProductListItem extends Component {
             productsCount:prevState.productsCount - 1
         }))
     }
-
+    
     render() {
         return(
             <div className="product-list-item">
@@ -35,9 +35,9 @@ class ProductListItem extends Component {
                 <div className="product-features">Type: {this.props.type}</div>
                 <div className="product-features">Capacity: {this.props.capacity}</div>
                 <div className="product-quantity">
-                    <button onClick={this.onDecrementClick}>-</button>
+                    <button onClick={this.onDecrementClick} disabled={this.state.productsCount <=1} >-</button>
                     <input type="text" value = {this.state.productsCount} readOnly={true}></input>
-                    <button onClick={this.onIncrementClick} >+</button>
+                    <button onClick={this.onIncrementClick} disabled={this.state.productsCount >=10} >+</button>
                 </div>
                 <div className="product-price">Price: {this.props.price}</div>
                 <button className="btn btn-add-to-cart"> Add to cart</button>
