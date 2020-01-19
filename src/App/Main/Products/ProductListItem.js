@@ -25,21 +25,29 @@ class ProductListItem extends Component {
     }
     
     render() {
+        const {
+            name,
+            description,
+            type,
+            capacity,
+            price,
+            image
+        } = this.props;
         return(
             <div className="product-list-item">
                 <div className="product-image">
-                    <img src={this.props.image} alt={this.props.name} title={this.props.name}/>
+                    <img src={image} alt={name} title={name}/>
                 </div>
-                <div className="product-title">{this.props.name}</div>
-                <div className="product-description">{this.props.description}</div>
-                <div className="product-features">Type: {this.props.type}</div>
-                <div className="product-features">Capacity: {this.props.capacity}</div>
+                <div className="product-title">{name}</div>
+                <div className="product-description">{description}</div>
+                <div className="product-features">Type: {type}</div>
+                <div className="product-features">Capacity: {capacity}</div>
                 <div className="product-quantity">
                     <button onClick={this.onDecrementClick} disabled={this.state.productsCount <=1} >-</button>
                     <input type="text" value = {this.state.productsCount} readOnly={true}></input>
                     <button onClick={this.onIncrementClick} disabled={this.state.productsCount >=10} >+</button>
                 </div>
-                <div className="product-price">Price: {this.props.price}</div>
+                <div className="product-price">Price: {price}</div>
                 <button className="btn btn-add-to-cart"> Add to cart</button>
             </div>  
         )
