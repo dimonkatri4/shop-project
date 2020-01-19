@@ -1,12 +1,10 @@
 import React from 'react'
-
 import './header.css'
-
 import Logo from './Logo/Logo'
 import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
 
-const Header =() => {
+const Header =({cartData}) => {
 	return (
 		<header className="header">
 			<div className="container">
@@ -18,7 +16,10 @@ const Header =() => {
 						<Menu/>
 					</div>
 					<div className="col-lg-3">
-						<Cart/>
+						<Cart
+							count = {cartData.count}
+							price = {cartData.price}
+						/>
 					</div>
 				</div>
 			</div>
