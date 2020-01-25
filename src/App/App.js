@@ -31,8 +31,10 @@ addProductToCart = (count, price) => {
 			<Header
 				cartData = {this.state.cartData}
 			/>
-			<button onClick={()=>this.addProductToCart(1,1)}>Add to cart</button>
-			<Main/>
+			<button onClick={()=>this.addProductToCart(5,500)}>Add to cart</button>
+			<Main
+				addProductToCart = {this.addProductToCart}
+			/>
 			<Footer/>
 		</div>
 	)

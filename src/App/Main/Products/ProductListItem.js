@@ -4,10 +4,6 @@ import './ProductListItem.css'
 
 class ProductListItem extends Component {
 
-    // constructor() {
-    //     super()
-    //     this.onIncrementClick = this.onIncrementClick.bind(this)
-    // }
 
     state = {
         productsCount:1,
@@ -31,8 +27,11 @@ class ProductListItem extends Component {
             type,
             capacity,
             price,
-            image
+            image,
+            addProductToCart
         } = this.props;
+      
+        console.log(addProductToCart)
         return(
             <div className="product-list-item">
                 <div className="product-image">
