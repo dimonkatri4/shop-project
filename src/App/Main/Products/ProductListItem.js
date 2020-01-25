@@ -4,10 +4,6 @@ import './ProductListItem.css'
 
 class ProductListItem extends Component {
 
-    // constructor() {
-    //     super()
-    //     this.onIncrementClick = this.onIncrementClick.bind(this)
-    // }
 
     state = {
         productsCount:1,

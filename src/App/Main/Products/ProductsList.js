@@ -2,7 +2,8 @@ import React from 'react'
 import ProductListItem from './ProductListItem'
 import productsData from './productsData'
 
-const ProductsList = () => {
+const ProductsList = ({addProductToCart}) => {
+    console.log(addProductToCart)
     return (
         <div>
             <h1 className="page-title">Products List</h1>

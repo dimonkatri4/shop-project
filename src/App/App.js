@@ -25,6 +25,7 @@ addProductToCart = (count, price) => {
 		
 	}))
 }
+
 	render() {
 	return (
 		<div>
@@ -32,11 +33,14 @@ addProductToCart = (count, price) => {
 				cartData = {this.state.cartData}
 			/>
 			<button onClick={()=>this.addProductToCart(1,1)}>Add to cart</button>
-			<Main/>
+			<Main
+				addProductToCart = {this.addProductToCart}
+			/>
 			<Footer/>
 		</div>
 	)
 }
 }
+
 
 export default App
