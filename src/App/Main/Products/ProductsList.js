@@ -3,7 +3,7 @@ import ProductListItem from './ProductListItem'
 import productsData from './productsData'
 
 const ProductsList = ({addProductToCart}) => {
-    console.log(addProductToCart)
+    
     return (
         <div>
             <h1 className="page-title">Products List</h1>
@@ -28,6 +28,7 @@ const ProductsList = ({addProductToCart}) => {
                                 capacity = {capacity}
                                 price = {price}
                                 image = {image}
+                                addProductToCart = {addProductToCart}
                             />
                         </div>
                     ))
