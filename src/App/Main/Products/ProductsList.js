@@ -2,7 +2,7 @@ import React from 'react'
 import ProductListItem from './ProductListItem'
 import productsData from './productsData'
 
-const ProductsList = (addProductToCart) => {
+const ProductsList = ({addProductToCart}) => {
     
     return (
         <div>
