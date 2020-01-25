@@ -3,13 +3,13 @@ import './cart.css'
 
 
 const Cart = ({
-	price,
-	count
+	productInCart
 }) => {
+	console.log(productInCart)
 	return (
 	<div className="cart text-center">
-		<div className="products-count">{count}</div>
-		<div className="products-price">${price}</div>
+		<div className="products-count">{productInCart[2]}</div>
+		<div className="products-price">${}</div>
 	</div>		
 	)
 }

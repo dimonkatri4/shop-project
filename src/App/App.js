@@ -10,28 +10,27 @@ import Footer from './Footer/Footer'
 class App extends Component {
 
 	state = {
-	cartData: {
-		count: 0,
-		price:0,
+	productInCart: {
+		1:5,
+		2:10
 	}
 }
 
 addProductToCart = (count, price) => {
-	this.setState((prevState)=>({
-		cartData: {
-			count: prevState.cartData.count + count,
-			price:prevState.cartData.price + (price*count)
-		}
+// 	this.setState((prevState)=>({
+// 		cartData: {
+// 			count: prevState.cartData.count + count,
+// 			price:prevState.cartData.price + (price*count)
+// 		}
 		
-	}))
-}
+// 	}))
+  }
 	render() {
 	return (
 		<div>
 			<Header
-				cartData = {this.state.cartData}
+				productInCart= {this.state.productInCart}
 			/>
-			<button onClick={()=>this.addProductToCart(5,500)}>Add to cart</button>
 			<Main
 				addProductToCart = {this.addProductToCart}
 			/>
