@@ -6,6 +6,7 @@ import '../common/style/base.css'
 import Header from './Header/Header'
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
+import {keys} from "lodash"
 
 class App extends Component {
 
@@ -16,14 +17,19 @@ class App extends Component {
 	}
 }
 
-addProductToCart = (count, price) => {
-// 	this.setState((prevState)=>({
-// 		cartData: {
-// 			count: prevState.cartData.count + count,
-// 			price:prevState.cartData.price + (price*count)
-// 		}
+addProductToCart = (productId, count) => {
+	this.setState((prevState)=>({
+		productInCart: {
+			productId: productId = keys(productInCart),
+			count: 
+		}
+
+		// cartData: {
+		// 	count: prevState.cartData.count + count,
+		// 	price:prevState.cartData.price + (price*count)
+		// }
 		
-// 	}))
+	}))
   }
 	render() {
 	return (
