@@ -1,34 +1,56 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
-const ProductListItem = ({
-    name,
-    description = "No description..",
-    type,
-    capacity,
-    price,
-    image = './images/products/no-image.png'
-}) => {
-    return(
-        <div className="product-list-item">
-            <div className="product-image">
-                <img src={image} alt={name} title={name}/>
-            </div>
-            <div className="product-title">{name}</div>
-            <div className="product-description">{description}</div>
-            <div className="product-features">Type: {type}</div>
-            <div className="product-features">Capacity: {capacity}</div>
-            <div className="product-quantity">
-                <button>-</button>
-                <input type="text" value = "1" readOnly={true}></input>
-                <button>+</button>
-            </div>
-            <div className="product-price">Price: {price}</div>
-            <button className="btn btn-add-to-cart"> Add to cart</button>
-        </div>       
-    )
+
+class ProductListItem extends Component {
+    
+    state = {
+        productsCount: 1
+    }
+
+    onIncrementClick =() => {
+        this.setState((prevState)=>({
+            productsCount:prevState.productsCount + 1
+        }))
+    }
+
+    onDecrementClick = () => {
+        this.setState((prevState)=>({
+            productsCount:prevState.productsCount - 1
+        }))
+    }
+
+    render() {
+        const {
+            name,
+            image,
+            description,
+            type,
+            capacity,
+            price
+        } = this.props
+        return(
+            <div className="product-list-item">
+                <div className="product-image">
+                    <img src={image} alt={name} title={name}/>
+                </div>
+                <div className="product-title">{name}</div>
+                <div className="product-description">{description}</div>
+                <div className="product-features">Type: {type}</div>
+                <div className="product-features">Capacity: {capacity}</div>
+                <div className="product-quantity">
+                    <button onClick = {this.onDecrementClick} disabled={this.state.productsCount<=1} >-</button>
+                    <input type="text" value = {this.state.productsCount} readOnly={true}></input>
+                    <button onClick = {this.onIncrementClick} disabled={this.state.productsCount>=10} >+</button>
+                </div>
+                <div className="product-price">Price: {price}</div>
+                <button className="btn btn-add-to-cart"> Add to cart</button>
+            </div> 
+        )
+    }
 }
+
 
 ProductListItem.propTypes = {
     name: PropTypes.string.isRequired,

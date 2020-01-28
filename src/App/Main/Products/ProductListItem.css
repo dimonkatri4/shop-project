@@ -67,3 +67,9 @@
     height: 30px;
     text-align: center;
 }
+button:disabled {
+    background-color: slategrey;
+}
+button:disabled:hover {
+    background-color: grey;
+}
