@@ -29,6 +29,7 @@ const ProductsList = ({addProductToCart}) => {
                                 price = {price}
                                 image = {image}
                                 addProductToCart = {addProductToCart}
+                                id = {id}
                             />
                         </div>
                     ))
