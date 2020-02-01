@@ -7,7 +7,6 @@ const Cart = ({
 	productInCart
 }) => {
 	
-	console.log(keys(productInCart))
 	return (
 	<div className="cart text-center">
 		{
