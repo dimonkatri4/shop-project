@@ -17,23 +17,35 @@ class App extends Component {
 	}
 }
 
+productId = keys(this.state.productInCart);
+
 addProductToCart = (productId, count) => {
 	this.setState((prevState)=>({
 		productInCart: {
-			productId: keys(this.state.productInCart),
-			count: prevState.productInCart[productId] + 1
-		} 
+			[productId]: prevState.productInCart[productId] + count
+		}
 	}))
-  }
+}
+
+// addProductToCart = (productId, count) => {
+// 	this.setState((prevState)=>({
+// 		productInCart: keys(this.state.productInCart).map((productId)=>(
+// 			{productId:prevSatet.productInCart[productId]}
+// 		))})
+//   }
   
+
+
+
+
 	render() {
-		console.log(keys(this.state.productInCart))
+		console.log(this.productId)
 	return (
 		<div>
 			<Header
 				productInCart= {this.state.productInCart}
 			/>
-			<button onClick={()=>this.addProductToCart(1,1)}>TEst</button>
+			<button onClick={()=>this.addProductToCart(1,1)} >Test</button>
 			<Main
 				addProductToCart = {this.addProductToCart}
 			/>

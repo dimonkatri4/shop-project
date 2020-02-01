@@ -26,4 +26,5 @@ const Header =({productInCart}) => {
 	)
 }
 
+
 export default Header

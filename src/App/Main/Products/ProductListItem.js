@@ -22,6 +22,7 @@ class ProductListItem extends Component {
     
     render() {
         const {
+            id,
             name,
             description,
             type,
@@ -30,9 +31,9 @@ class ProductListItem extends Component {
             image,
             addProductToCart
         } = this.props;
-    
+        console.log({id})
         return(
-            <div className="product-list-item">
+            <div className="product-list-item" key={id}>
                 <div className="product-image">
                     <img src={image} alt={name} title={name}/>
                 </div>
@@ -48,7 +49,7 @@ class ProductListItem extends Component {
                 <div className="product-price">Price: {price}</div>
                 <button 
                     className="btn btn-add-to-cart" 
-                    onClick={()=>addProductToCart(this.state.productsCount, price)}> 
+                    onClick={()=>addProductToCart({id}, this.state.productsCount)}> 
                     Add to cart</button>
             </div>  
         )
@@ -57,6 +58,7 @@ class ProductListItem extends Component {
 
 
 ProductListItem.propTypes = {
+    id: PropTypes.number,
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
     capacity: PropTypes.number.isRequired,

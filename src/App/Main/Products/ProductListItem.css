@@ -68,5 +68,8 @@
     text-align: center;
 }
 button:disabled {
-    background-color: #ccc;
+    background-color: slategrey;
+}
+button:disabled:hover {
+    background-color: grey;
 }
