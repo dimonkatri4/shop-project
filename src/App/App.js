@@ -21,22 +21,11 @@ productId = keys(this.state.productInCart);
 
 addProductToCart = (productId, count) => {
 	this.setState((prevState)=>({
-		productInCart: {
+		productInCart: Object.assign({}, prevState.productInCart, {
 			[productId]: (prevState.productInCart[productId] || 0) + count
-		}
+		})
 	}))
 }
-
-// addProductToCart = (productId, count) => {
-// 	this.setState((prevState)=>({
-// 		productInCart: keys(this.state.productInCart).map((productId)=>(
-// 			{productId:prevSatet.productInCart[productId]}
-// 		))})
-//   }
-  
-
-
-
 
 	render() {
 		console.log(this.productId)
