@@ -33,7 +33,6 @@ addProductToCart = (productId, count) => {
 }
 
 	render() {
-		console.log(this.productId)
 	return (
 		<div>
 			<Header
