@@ -22,7 +22,7 @@ productId = keys(this.state.productInCart);
 addProductToCart = (productId, count) => {
 	this.setState((prevState)=>({
 		productInCart: {
-			[productId]: prevState.productInCart[productId] + count
+			[productId]: (prevState.productInCart[productId] || 0) + count
 		}
 	}))
 }
