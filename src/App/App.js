@@ -36,7 +36,6 @@ addProductToCart = (productId, count) => {
 			<Header
 				productInCart= {this.state.productInCart}
 			/>
-			<button onClick={()=>this.addProductToCart(1,1)} >Test</button>
 			<Main
 				addProductToCart = {this.addProductToCart}
 			/>
