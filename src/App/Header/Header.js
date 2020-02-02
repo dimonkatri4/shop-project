@@ -3,6 +3,8 @@ import './header.css'
 import Logo from './Logo/Logo'
 import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
+import { Route } from 'react-router-dom'
+
 
 const Header =({productInCart}) => {
 	return (
