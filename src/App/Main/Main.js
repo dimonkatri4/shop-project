@@ -13,10 +13,11 @@ const Main =({addProductToCart}) => {
 							Filter
 						</div>
 						<div className="col-lg-9">
-							{/* <ProductsList
-								addProductToCart = {addProductToCart}
-							/> */}
-							<Route exact path="/" component={ProductsList} />
+							<Route exact path="/" render={()=>(
+								<ProductsList
+									addProductToCart = {addProductToCart}
+									/>
+							)} />
 							<Route path="/cart" component={CartPage}/>
 						</div>
 						
