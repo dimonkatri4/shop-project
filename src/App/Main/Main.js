@@ -1,5 +1,7 @@
 import React from 'react'
 import ProductsList from './Products/ProductsList'
+import { Route } from 'react-router-dom'
+import CartPage from './CartPage/CartPage'
 
 const Main =({addProductToCart}) => {
 	
@@ -14,6 +16,7 @@ const Main =({addProductToCart}) => {
 							<ProductsList
 								addProductToCart = {addProductToCart}
 							/>
+							<Route path="/cart" component={CartPage}/>
 						</div>
 						
 					</div>
