@@ -2,6 +2,7 @@ import React from 'react'
 import './cart.css'
 import {keys} from "lodash"
 import productsData from './../../Main/Products/productsData'
+import {Link} from 'react-router-dom'
 
 const productsMap = productsData.reduce((accObj, product)=>({
 	...accObj,
@@ -27,7 +28,8 @@ const Cart = ({
 		Total: {
 			keys(productInCart).reduce((total,productId)=>
 			 total + (productsMap[productId].price * productInCart[productId]), 0 )
-		}
+		}$
+		<div><Link to="/cart">Show cart</Link></div>
 	</div>		
 	)
 }
