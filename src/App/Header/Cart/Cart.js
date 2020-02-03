@@ -14,15 +14,13 @@ const productsMap = productsData.reduce((accObj, product)=>({
 const Cart = ({
 	productInCart
 }) => {
-	console.log(keys(productInCart))
 	return (
 	<div className="cart text-center">
 		{
 			keys(productInCart).map((productId)=>(
 				<div key={productId}>
 					 {productsMap[productId].name}: {productInCart[productId]}: {(productsMap[productId].price * productInCart[productId])}$
-
-					</div>
+				</div>
 			)) 
 		}
 		Total: {

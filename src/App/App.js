@@ -37,6 +37,7 @@ addProductToCart = (productId, count) => {
 			/>
 			<Main
 				addProductToCart = {this.addProductToCart}
+				productInCart= {this.state.productInCart}
 			/>
 			<Footer/>
 		</div>

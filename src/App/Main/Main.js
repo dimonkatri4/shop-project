@@ -5,8 +5,10 @@ import CartPage from './CartPage/CartPage'
 import ShippingPage from './ShippingPage/ShippingPage'
 import PaymentPage from './PaymentPage/PaymentPage'
 
-const Main =({addProductToCart},{productInCart}) => {
-	
+const Main =({
+			addProductToCart,
+			productInCart
+		}) => {
 	return (
 			<main className="main">
 				<div className="container">
@@ -20,11 +22,11 @@ const Main =({addProductToCart},{productInCart}) => {
 									addProductToCart = {addProductToCart}
 									/>
 							)} />
-							<Route path="/cart" render={()=>
+							<Route path="/cart" render={()=>(
 								<CartPage
 								productInCart = {productInCart}
 								/>
-							}/>
+							)}/>
 							<Route path="/payment" component={PaymentPage}/>
 							<Route path="/shipping" component={ShippingPage} />
 						</div>
