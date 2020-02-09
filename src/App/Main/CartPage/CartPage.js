@@ -1,7 +1,7 @@
 import React from 'react'
 import CartTotal from '../../../Components/Cart/CartTotal'
 import CartProductList from '../../../Components/Cart/CartProductList'
-
+import CartProductListItemExtended from '../../../Components/Cart/CartProductListItemExtended'
 
 const CartPage = ({
     productInCart
@@ -12,6 +12,7 @@ const CartPage = ({
             <div className="page-title"> 
                 <CartProductList
                     productInCart={productInCart}
+                    CartList={CartProductListItemExtended}
                 />
                 {/* {
                 keys(productInCart).map((productId)=>(
