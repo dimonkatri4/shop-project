@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import '../common/style/reset.css'
 import '../common/style/base.css'
-import {omit} from 'object.omit'
+import {omit} from 'lodash'
 import Header from './Header/Header'
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
@@ -29,14 +29,9 @@ addProductToCart = (productId, count) => {
 	}))
 }
 removeProductFromCart = (productId) => {
-	this.setState((prevState)=>{
-		let prevProductsInCart = {...prevState.productInCart}
-
-		delete prevProductsInCart[productId]
-		return {
-			productInCart:prevProductsInCart
-		}
-	})
+	this.setState((prevState)=>({
+		productInCart: omit(prevState.productInCart, productId)
+		}))
 }
 	render() {
 	return (
