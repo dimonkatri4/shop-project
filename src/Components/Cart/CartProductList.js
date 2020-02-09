@@ -6,13 +6,14 @@ import CartProductListItem from './CartProductListItem'
 const CartProductList = ({
     productInCart,
     productsMap = getProductsMap(productsData),
-    CartList = CartProductListItem
+    CartList = CartProductListItem,
     }) => {
     return (
         keys(productInCart).map((productId)=>(
             <CartList
                 product = {productsMap[productId]}
                 productCount = {productInCart[productId]}
+                key = {productId}
             />
         )) 
     )
