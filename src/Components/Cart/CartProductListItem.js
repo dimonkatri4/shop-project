@@ -2,7 +2,7 @@ import React from 'react'
 
 const CartProductListItem = ({
     product,
-    productCount
+    productCount,
 }) => {
     return (
         <div>{product.name}: {productCount}</div>

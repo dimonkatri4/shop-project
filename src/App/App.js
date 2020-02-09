@@ -44,10 +44,10 @@ removeProductFromCart = (productId) => {
 			<Header
 				productInCart= {this.state.productInCart}
 			/>
-			<button onClick={()=>{this.removeProductFromCart(1)}}>Delete</button>
 			<Main
 				addProductToCart = {this.addProductToCart}
 				productInCart= {this.state.productInCart}
+				removeProductFromCart = {this.removeProductFromCart}
 			/>
 			<Footer/>
 			

@@ -7,6 +7,7 @@ const CartProductList = ({
     productInCart,
     productsMap = getProductsMap(productsData),
     CartList = CartProductListItem,
+    removeProductFromCart
     }) => {
     return (
         keys(productInCart).map((productId)=>(
@@ -14,6 +15,7 @@ const CartProductList = ({
                 product = {productsMap[productId]}
                 productCount = {productInCart[productId]}
                 key = {productId}
+                removeProductFromCart={removeProductFromCart}
             />
         )) 
     )
