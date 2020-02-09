@@ -14,13 +14,6 @@ const CartPage = ({
                     productInCart={productInCart}
                     CartList={CartProductListItemExtended}
                 />
-                {/* {
-                keys(productInCart).map((productId)=>(
-                    <div key={productId}>
-                        {productsMap[productId].name}: {productInCart[productId]} x {productsMap[productId].price}$ = {productsMap[productId].price *productInCart[productId]}$
-                    </div>
-                 )) 
-                } */}
             </div>
             <div className="page-title">
                 <CartTotal
