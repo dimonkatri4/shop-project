@@ -39,7 +39,11 @@ class ProductListItem extends Component {
                 <div className="product-title">
                     <Link to={`/products/${id}`}>{name}</Link> 
                 </div>
-                <div className="product-description">{description}</div>
+                <div className="product-description"
+                dangerouslySetInnerHTML={{
+                        __html:description
+                    }}
+                ></div>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity}</div>
                 <div className="product-quantity">
