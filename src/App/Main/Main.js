@@ -9,7 +9,8 @@ import ProductPage from './ProductPage/ProductPage'
 const Main =({
 			addProductToCart,
 			productInCart,
-			removeProductFromCart
+			removeProductFromCart,
+			changeProductCount,
 		}) => {
 	return (
 			<main className="main">
@@ -28,6 +29,7 @@ const Main =({
 								<CartPage
 								productInCart = {productInCart}
 								removeProductFromCart = {removeProductFromCart}
+								changeProductCount = {changeProductCount}
 								/>
 							)}/>
 							<Route path="/payment" component={PaymentPage}/>

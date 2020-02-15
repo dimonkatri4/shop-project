@@ -33,6 +33,17 @@ removeProductFromCart = (productId) => {
 		productInCart: omit(prevState.productInCart, productId)
 		}))
 }
+
+changeProductCount = (productId,count) => {
+	this.setState((prevState)=>({
+		productInCart: {
+			...prevState.productInCart,
+				[productId]: count
+
+		}
+	}))
+}
+
 	render() {
 	return (
 		<div>
@@ -43,6 +54,7 @@ removeProductFromCart = (productId) => {
 				addProductToCart = {this.addProductToCart}
 				productInCart= {this.state.productInCart}
 				removeProductFromCart = {this.removeProductFromCart}
+				changeProductCount = {this.changeProductCount}
 			/>
 			<Footer/>
 			
