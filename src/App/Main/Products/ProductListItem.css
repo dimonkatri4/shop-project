@@ -73,3 +73,21 @@ button:disabled {
 button:disabled:hover {
     background-color: grey;
 }
+.like-btn {
+	box-sizing: border-box;
+	border:1px solid #2c71b8;
+	width: 30px;
+	height: 30px;
+	background: url(like.png) no-repeat 50% 50%;
+}
+.like-btn:hover, .liked {
+	background: url(like2.png) no-repeat 50% 50%;
+    background-color: #2c71b8;
+    border:1px solid #ffff;
+}
+.btn_like {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+}

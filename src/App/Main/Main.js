@@ -11,6 +11,7 @@ const Main =({
 			productInCart,
 			removeProductFromCart,
 			changeProductCount,
+			changeButtonLike,
 		}) => {
 	return (
 			<main className="main">
@@ -23,6 +24,7 @@ const Main =({
 							<Route exact path="/" render={()=>(
 								<ProductsList
 									addProductToCart = {addProductToCart}
+									changeButtonLike = {changeButtonLike}
 									/>
 							)} />
 							<Route path="/cart" render={()=>(

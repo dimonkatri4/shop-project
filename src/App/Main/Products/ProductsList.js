@@ -2,7 +2,10 @@ import React from 'react'
 import ProductListItem from './ProductListItem'
 import productsData from './productsData'
 
-const ProductsList = ({addProductToCart}) => {
+const ProductsList = ({
+            addProductToCart,
+            changeButtonLike,
+        }) => {
     
     return (
         <div>
@@ -30,6 +33,7 @@ const ProductsList = ({addProductToCart}) => {
                                 image = {image}
                                 addProductToCart = {addProductToCart}
                                 id = {id}
+                                changeButtonLike = {changeButtonLike}
                             />
                         </div>
                     ))

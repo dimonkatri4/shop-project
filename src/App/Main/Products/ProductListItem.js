@@ -30,15 +30,16 @@ class ProductListItem extends Component {
             capacity,
             price,
             image,
-            addProductToCart
+            addProductToCart,
+            changeButtonLike
         } = this.props;
         return(
             <div className="product-list-item">
                 <div className="product-image">
                     <img src={image} alt={name} title={name}/>
                 </div>
-                <button onClick="">
-                    <span>&#128156;</span> ---- <span>&#128151;</span>
+                <button className="btn_like" onClick={()=>changeButtonLike(id)}>
+                    <div className={changeButtonLike ? 'like-btn' : 'liked' }></div>
                 </button>
                 <div className="product-title">
                     <Link to={`/products/${id}`}>{name}</Link> 
