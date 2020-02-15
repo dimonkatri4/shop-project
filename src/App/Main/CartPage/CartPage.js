@@ -10,7 +10,7 @@ const CartPage = ({
     return (
         <div>
             <h1 className="page-title">Cart page</h1>
-            <div className="page-title"> 
+            <div> 
                 <CartProductList
                     productInCart={productInCart}
                     CartList={CartProductListItemExtended}

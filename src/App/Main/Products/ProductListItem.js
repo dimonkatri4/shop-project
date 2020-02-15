@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
 import {Link} from 'react-router-dom'
+import Quantity from '../../../Components/Quantity/Quantity'
 
 class ProductListItem extends Component {
 
@@ -39,18 +40,14 @@ class ProductListItem extends Component {
                 <div className="product-title">
                     <Link to={`/products/${id}`}>{name}</Link> 
                 </div>
-                <div className="product-description"
-                dangerouslySetInnerHTML={{
-                        __html:description
-                    }}
-                ></div>
+                <div className="product-description">{description}</div>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity}</div>
-                <div className="product-quantity">
-                    <button onClick={this.onDecrementClick} disabled={this.state.productsCount <=1} >-</button>
-                    <input type="text" value = {this.state.productsCount} readOnly={true}></input>
-                    <button onClick={this.onIncrementClick} disabled={this.state.productsCount >=10} >+</button>
-                </div>
+                <Quantity
+                    productsCount = {this.state.productsCount}
+                    onDecrementClick = {this.onDecrementClick}
+                    onIncrementClick = {this.onIncrementClick}
+                />
                 <div className="product-price">Price: {price}</div>
                 <button 
                     className="btn btn-add-to-cart" 
