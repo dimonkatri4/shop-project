@@ -14,10 +14,20 @@ class App extends Component {
 	productInCart: {
 		1:5,
 		2:2,
+	},
+	btnHead: {
+		1:true,
+		2:false
 	}
 }
 
 productId = keys(this.state.productInCart);
+
+changeButtonHead = () => {
+	this.setState((prevState)=>({
+		btnHead = 
+	}))
+}
 
 addProductToCart = (productId, count) => {
 	this.setState((prevState)=>({
