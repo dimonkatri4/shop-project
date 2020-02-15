@@ -37,6 +37,9 @@ class ProductListItem extends Component {
                 <div className="product-image">
                     <img src={image} alt={name} title={name}/>
                 </div>
+                <button onClick="">
+                    <span>&#128156;</span> ---- <span>&#128151;</span>
+                </button>
                 <div className="product-title">
                     <Link to={`/products/${id}`}>{name}</Link> 
                 </div>
