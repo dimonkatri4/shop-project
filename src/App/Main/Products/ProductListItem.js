@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './ProductListItem.css'
 import {Link} from 'react-router-dom'
 import Quantity from '../../../Components/Quantity/Quantity'
+import {connect} from 'react-redux'
 
 class ProductListItem extends Component {
 
@@ -31,6 +32,7 @@ class ProductListItem extends Component {
             price,
             image,
             addProductToCart,
+            isLiked = false,
         } = this.props;
         return(
             <div className="product-list-item">
@@ -38,7 +40,7 @@ class ProductListItem extends Component {
                     <img src={image} alt={name} title={name}/>
                 </div>
                 <button>
-                    <span>&#128156;</span> ---- <span>&#128151;</span>
+                    {isLiked ? <span>&#128151;</span> : <span>&#128156;</span> }
                 </button>
                 <div className="product-title">
                     <Link to={`/products/${id}`}>{name}</Link> 
@@ -77,4 +79,10 @@ ProductListItem.defaultProps = {
     description: "No description ...",
 }
 
-export default ProductListItem
+const mapStateToProps = (state,props) => ({
+    isLiked:state[props.id]
+})
+
+export default connect(
+    mapStateToProps
+) (ProductListItem)
