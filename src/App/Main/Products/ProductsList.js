@@ -4,7 +4,6 @@ import productsData from './productsData'
 
 const ProductsList = ({
             addProductToCart,
-            changeButtonLike,
         }) => {
     
     return (
@@ -33,7 +32,6 @@ const ProductsList = ({
                                 image = {image}
                                 addProductToCart = {addProductToCart}
                                 id = {id}
-                                changeButtonLike = {changeButtonLike}
                             />
                         </div>
                     ))

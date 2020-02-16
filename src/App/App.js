@@ -14,23 +14,10 @@ class App extends Component {
 	productInCart: {
 		1:5,
 		2:2,
-	},
-	btnLike: {
-		1:true,
-		2:false
 	}
 }
 
 productId = keys(this.state.productInCart);
-
-changeButtonLike = (productId) => {
-	this.setState((prevState)=>({
-		btnLike: {
-			...prevState.btnLike,
-			[productId]: !(prevState.btnLike[productId])
-		} 
-	}))
-}
 
 addProductToCart = (productId, count) => {
 	this.setState((prevState)=>({
@@ -68,7 +55,6 @@ changeProductCount = (productId,count) => {
 				productInCart= {this.state.productInCart}
 				removeProductFromCart = {this.removeProductFromCart}
 				changeProductCount = {this.changeProductCount}
-				changeButtonLike = {this.changeButtonLike}
 			/>
 			<Footer/>
 			
